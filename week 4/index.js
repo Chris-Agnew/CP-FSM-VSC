@@ -17,6 +17,11 @@
 //     return x - y;
 // }
 
+// const divide = (x , y){
+//     return x / y;
+// }
+
+
 //// example: (3 * 2) + 3
 // res1:    (5 * 6) - 5 + (8 * 5)
 // res2:    ((2 - 3) * (4 * 5)) - 10 + (8 * 3)
@@ -54,23 +59,44 @@
 
 // todo write function called sumPrimes. Takes in N. find all prime numbers up to n and add them all together
 
-const sumPrimes = (n) => {
-    let sum = 0;
-    let array = [];
-    let isPrime;
-    for (let i = 2; i < n; i++) {
-        if(n % 2 === 0){
-            isPrime = false
-        }else{
-            isPrime = true
-        }
-    }
-    if (isPrime == true) {
-        array.push(n[i]);
-        console.log(array)
-    }
-}
+// const sumPrimes = (n) => {
+//     let sum = 0;
+//     let array = [];
+//     for (let i = 2; i < n; i++) {
+//         if(n % i === 0){
+//             return false
+//         }else{
+//           return  sum += i
+//         }
+//     }
+    
+// }
 
-console.log(sumPrimes(5))
+// console.log(sumPrimes(17))
 
+// const convertToFarenheit = (num) => {
+//     return num * 1.8 + 32
+// }
 
+// console.log(convertToFarenheit(10))
+
+// const addArray = (array) => {
+//     let sum = 0;
+//     for (num of array) {
+//         sum += num
+//     }
+//     return sum
+// }
+
+// console.log(addArray([1,2,3]))
+// let array = []
+// function getPrimes(max) {
+//     for (let i = 2; i < max; i++){
+//         if (max % i == 0){
+//             return false
+//         }else{
+//             )
+//         }
+//     } 
+//   }
+//   console.log(array)
