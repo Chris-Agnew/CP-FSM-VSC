@@ -58,20 +58,28 @@
 // console.log(findMax([1,5,50,75,1337,12,24,31415,432]));
 
 // todo write function called sumPrimes. Takes in N. find all prime numbers up to n and add them all together
+// const isPrime = (n) =>{
+//    for (let i = 2; i < n; i++) {
+//      if (n % i === 0){
+//        return false;
+//      }
+//    }
+//    return true
+// }
+
+
 
 // const sumPrimes = (n) => {
 //     let sum = 0;
 //     let array = [];
-//     for (let i = 2; i < n; i++) {
-//         if(n % i === 0){
-//             return false
-//         }else{
-//           return  sum += i
-//         }
+//     for (let j = 2; j < n; j++) {
+//         if(isPrime(n)){
+//           sum += n
+       
 //     }
-    
+//   }
+//   return sum
 // }
-
 // console.log(sumPrimes(17))
 
 // const convertToFarenheit = (num) => {
@@ -100,3 +108,143 @@
 //     } 
 //   }
 //   console.log(array)
+
+// const reverse = (str) => {
+//     let reverseString = '';
+//     for (let i = str.length - 1; i>=0; i--){
+//         reverseString += str[i]
+//     }
+//     return reverseString
+// }
+
+// console.log(reverse('fishes'))
+
+// const diff = (array1, array2) => {
+//     const array3 = array1.map(x =>x)
+//     return array3
+//   }
+
+//   console.log(diff([1,2,3], [4,5,6]))
+
+// let citiesInTheWorld = [
+//   ['Amsterdam', 'The Netherlands'], 
+//   ['Moscow', 'Russia'],
+//   ['Los Angeles', 'The United States'], 
+//   ['Seoul', 'Korea'], 
+//   ['Jakarta', 'Indonesia']
+// ];
+
+
+
+// let citiesToObject = (array) => {
+//   let citiesObject = {};
+//   for (let i = 0; i < array.length; i++){
+//      citiesObject[array[i][0]] = array[i][1];
+//   }
+//   return citiesObject
+// }
+
+// console.log(citiesToObject(citiesInTheWorld))
+
+// let array = [0, 1, 'hello', '*&^', false, 2, undefined, '', 3, null, 23, 109];
+// const invalid = array =>{
+//   let newArray = [];
+
+//   for (let i = 0; i < array.length; i++){
+//     if (array[i]){
+//       newArray.push(array[i]);
+//     }
+//   }
+//   return newArray;
+
+// }
+
+// console.log(invalid(array))
+
+// const nameTimesNum = (name,num) => {
+//   if (num == 1){
+//     return name
+//   }else{
+//     console.log(name) 
+//     return nameTimesNum(name, num - 1)
+//   }
+// }
+
+// nameTimesNum('Chris',10)
+
+// // todo sum diagonals and subtract
+
+// let test = [11,2,4,4,5,6,10,8,-12]
+
+// const diagonals  = (array) => {
+//   let leftSum = 0;
+//   let rightSum = 0;
+//  for (let i = 0; i < array.length; i++){
+//    if(i == 0 || i == 8){
+//     leftSum += array[i]
+//    }else if(i == 2 || i == 6){
+//      rightSum += array[i]
+//    }else if(i == 4 ){
+//      leftSum += array[i]
+//      rightSum += array[i]
+//    }
+//   } 
+//   console.log('left sum is ' + leftSum)
+//   console.log('right sum is ' + rightSum)
+//   return Math.abs(leftSum - rightSum)
+// }
+// console.log(diagonals(test))
+
+
+// // Todo Fib recursive function
+
+// const fib = (n) => {
+//   if (n <= 1){
+//     return n;
+//   }else{
+//     return fib(n - 1) + fib(n - 2);
+//   }+69
+// }
+
+// const fibTern = (n) =>{
+// return n <= 1 ? n : fibTern(n - 2) + fibTern(n - 1);
+
+// }
+
+// const getFactorial = (n) => {
+//   if (n == 1){
+//     return 1
+//   }else{
+//     return n * getFactorial(n-1)
+//   }
+// }
+
+// console.log(getFactorial(5))
+
+// const isEven = (num) => {
+//   if (num==0){
+//     console.log('even')
+//   }else if (num == 1){
+//     console.log('odd')
+//   }else{
+//     isEven(num-2)
+//   }
+// }
+
+// isEven(6)
+// isEven(7)
+
+let add = [7,2,3,4,5,6];
+
+const sumArray = (array) =>{
+  
+  if (array.length == 1){
+    return array[0];
+  }else{
+    console.log(array)
+    return  array.pop() + sumArray(array);
+  
+  }
+}
+
+console.log(sumArray(add))
