@@ -234,17 +234,69 @@
 // isEven(6)
 // isEven(7)
 
-let add = [7,2,3,4,5,6];
+// let add = [7,2,3,4,5,6];
 
-const sumArray = (array) =>{
+// const sumArray = (array) =>{
   
-  if (array.length == 1){
-    return array[0];
-  }else{
-    console.log(array)
-    return  array.pop() + sumArray(array);
+//   if (array.length == 1){
+//     return array[0];
+//   }else{
+//     console.log(array)
+//     return  array.pop() + sumArray(array);
   
-  }
+//   }
+// }
+
+// console.log(sumArray(add)) 
+
+// let array1 = [1,2,3,4,5,6];
+// let array2 = [5,6,7,8,9,10];
+
+
+// const unique = (array1, array2) => {
+//   let array3 = [];
+//   let unique1;
+//   let unique2;
+  
+//   for (let i = 0; i < array1.length; i++){
+//     let unique1 = array1[i];
+//     console.log(unique1)
+//   }
+//   for(let j = 0; j < array2.length; j++){
+//       let unique2 = array2[j];
+//       console.log(unique2)
+//   }
+
+//   if (unique1 != unique2){
+//     array3.push();
+    
+//   }
+//   return array3
+// }
+
+
+// console.log(unique(array1, array2));
+
+let array = [1,2,3, 4, 5, 5, 6, 3]
+
+const duplicate = (array) => {
+  const remove = array.filter((item, index) =>array.indexOf(item) === index);
+  return remove
 }
 
-console.log(sumArray(add))
+console.log(duplicate(array))
+
+
+// const calcGeometry = (radius) => {
+//   const getCircumference = () => {
+//     return 2 * Math.PI * radius
+//   }
+//   const getArea = () => {
+//     return Math.PI * radius**2
+//   }
+  
+// return 'The Circumference is ' + getCircumference().toFixed(2) + ' and the area is ' + getArea().toFixed(2)
+  
+// }
+
+// console.log(calcGeometry(17))
