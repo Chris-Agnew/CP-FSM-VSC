@@ -21,12 +21,10 @@
 //     return x / y;
 // }
 
-
 //// example: (3 * 2) + 3
 // res1:    (5 * 6) - 5 + (8 * 5)
 // res2:    ((2 - 3) * (4 * 5)) - 10 + (8 * 3)
 // res3:    (6 + 8) - (5 + 5) * (8 - 5)
-
 
 // let example = add(multiply(3,2), 3)
 
@@ -35,7 +33,7 @@
 // let res2 = undefined
 
 // let res3 = multiply(subtract(add(6,8), add(5,5), 3))
-// 
+//
 // console.log(res1)
 // console.log((5 * 6) - 5 + (8 * 5))
 
@@ -50,7 +48,7 @@
 //     for (num of array) {
 //         if (num > max){
 //             max = num;
-//         } 
+//         }
 //     }
 //     return max
 // }
@@ -67,26 +65,24 @@
 //    return true
 // }
 
-
-
 // const sumPrimes = (n) => {
 //     let sum = 0;
 //     let array = [];
 //     for (let j = 2; j < n; j++) {
 //         if(isPrime(n)){
 //           sum += n
-       
+
 //     }
 //   }
 //   return sum
 // }
 // console.log(sumPrimes(17))
 
-// const convertToFarenheit = (num) => {
+// const convertToFahrenheit = (num) => {
 //     return num * 1.8 + 32
 // }
 
-// console.log(convertToFarenheit(10))
+// console.log(convertToFahrenheit(10))
 
 // const addArray = (array) => {
 //     let sum = 0;
@@ -105,7 +101,7 @@
 //         }else{
 //             )
 //         }
-//     } 
+//     }
 //   }
 //   console.log(array)
 
@@ -127,14 +123,12 @@
 //   console.log(diff([1,2,3], [4,5,6]))
 
 // let citiesInTheWorld = [
-//   ['Amsterdam', 'The Netherlands'], 
+//   ['Amsterdam', 'The Netherlands'],
 //   ['Moscow', 'Russia'],
-//   ['Los Angeles', 'The United States'], 
-//   ['Seoul', 'Korea'], 
+//   ['Los Angeles', 'The United States'],
+//   ['Seoul', 'Korea'],
 //   ['Jakarta', 'Indonesia']
 // ];
-
-
 
 // let citiesToObject = (array) => {
 //   let citiesObject = {};
@@ -165,7 +159,7 @@
 //   if (num == 1){
 //     return name
 //   }else{
-//     console.log(name) 
+//     console.log(name)
 //     return nameTimesNum(name, num - 1)
 //   }
 // }
@@ -188,13 +182,12 @@
 //      leftSum += array[i]
 //      rightSum += array[i]
 //    }
-//   } 
+//   }
 //   console.log('left sum is ' + leftSum)
 //   console.log('right sum is ' + rightSum)
 //   return Math.abs(leftSum - rightSum)
 // }
 // console.log(diagonals(test))
-
 
 // // Todo Fib recursive function
 
@@ -232,60 +225,55 @@
 // }
 
 // isEven(6)
-// isEven(7)
+// isEven(9)
 
 // let add = [7,2,3,4,5,6];
 
 // const sumArray = (array) =>{
-  
+
 //   if (array.length == 1){
 //     return array[0];
 //   }else{
 //     console.log(array)
 //     return  array.pop() + sumArray(array);
-  
 //   }
 // }
 
-// console.log(sumArray(add)) 
+// console.log(sumArray(add))
 
-// let array1 = [1,2,3,4,5,6];
-// let array2 = [5,6,7,8,9,10];
+let array1 = [1, 2, 3, 4, 5, 6];
+let array2 = [5, 6, 7, 8, 9, 10];
 
+const unique = (array1, array2) => {
+  let array3 = [];
+  let unique1;
+  let unique2;
 
-// const unique = (array1, array2) => {
-//   let array3 = [];
-//   let unique1;
-//   let unique2;
-  
-//   for (let i = 0; i < array1.length; i++){
-//     let unique1 = array1[i];
-//     console.log(unique1)
-//   }
-//   for(let j = 0; j < array2.length; j++){
-//       let unique2 = array2[j];
-//       console.log(unique2)
-//   }
+  for (let i = 0; i < array1.length; i++) {
+    let unique1 = array1[i];
+    console.log(unique1);
+  }
+  for (let j = 0; j < array2.length; j++) {
+    let unique2 = array2[j];
+    console.log(unique2);
+  }
 
-//   if (unique1 != unique2){
-//     array3.push();
-    
-//   }
-//   return array3
+  if (unique1 != unique2) {
+    array3.push();
+  }
+  return array3;
+};
+
+console.log(unique(array1, array2));
+
+// let array = [1,2,3, 4, 5, 5, 6, 3]
+
+// const duplicate = (array) => {
+//   const remove = array.filter((item, index) =>array.indexOf(item) === index);
+//   return remove
 // }
 
-
-// console.log(unique(array1, array2));
-
-let array = [1,2,3, 4, 5, 5, 6, 3]
-
-const duplicate = (array) => {
-  const remove = array.filter((item, index) =>array.indexOf(item) === index);
-  return remove
-}
-
-console.log(duplicate(array))
-
+// console.log(duplicate(array))
 
 // const calcGeometry = (radius) => {
 //   const getCircumference = () => {
@@ -294,9 +282,9 @@ console.log(duplicate(array))
 //   const getArea = () => {
 //     return Math.PI * radius**2
 //   }
-  
+
 // return 'The Circumference is ' + getCircumference().toFixed(2) + ' and the area is ' + getArea().toFixed(2)
-  
+
 // }
 
 // console.log(calcGeometry(17))
