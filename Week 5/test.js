@@ -91,10 +91,9 @@ const canPlaceFlowers = (flowerbed, n) => {
       flowerbed[i + 1] !== 1
     ) {
       n--;
-      i++;
     }
   }
   return n === 0;
 };
 
-console.log(canPlaceFlowers([1, 0, 0, 0, 1], 1));
+console.log(canPlaceFlowers([1, 0, 0, 0, 0, 0, 1], 2));
