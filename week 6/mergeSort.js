@@ -19,7 +19,7 @@ const merge = (left, right) => {
       sorted.push(right.shift());
     }
   }
-  return sorted.concat(left.slice()).concat(right.slice());
+  return sorted.concat(left.slice(), right.slice());
 };
 
 console.log(mergeSort(array));
