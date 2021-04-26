@@ -5,11 +5,11 @@ class Stack {
   }
   push(item) {
     this.top++;
-    return this.array.push(item);
+    return this.array.unshift(item);
   }
   pop() {
     this.top--;
-    return this.array.pop();
+    return this.array.shift();
   }
   peek() {
     return this.array[this.array.length - 1];
