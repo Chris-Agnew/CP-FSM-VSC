@@ -15,6 +15,7 @@ node2.next = node1;
 class LinkedList {
   constructor() {
     this.head = null;
+    this.tail = null;
     this.size = 0;
   }
 
@@ -33,10 +34,31 @@ class LinkedList {
     }
   }
   isEmpty() {
-    return this.size === 0;
+    return this.size == 0;
   }
   size() {
     return this.size;
+  }
+  prepend(element) {
+    let node = new Node(element);
+    let temp;
+    this.size++;
+    if (!this.head) {
+      this.tail = node;
+    } else {
+      node.next = this.head;
+      this.head = node;
+    }
+  }
+  find(element) {
+    let current = this.head;
+    while (current != null)
+      if (current.element == element) {
+        return `You've found: ${element}`;
+      } else {
+        current = current.next;
+      }
+    return `${element} not found`;
   }
 }
 
@@ -49,5 +71,8 @@ list.append("but");
 list.append("Lance");
 list.append("is");
 list.append("not");
+list.prepend("The");
+// list.delete("daniel");
 
 console.log(list);
+console.log(list.find("coe"));
