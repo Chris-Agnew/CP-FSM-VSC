@@ -1,3 +1,5 @@
+const { WSAEHOSTDOWN } = require("constants");
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -48,7 +50,44 @@ class BinarySearchTree {
     }
     return false;
   }
+  delete(value) {
+    const deleteNode = (node, value) => {
+      if (!node) {
+        return null;
+      }
+      if (value == node.value) {
+        if (!node.left && !node.right) {
+          return null;
+        }
+        if (!node.left) {
+          return node.right;
+        }
+        if (!node.right) {
+          return node.left;
+        }
+      } else if (value < node.value) {
+        node.left = deleteNode(node.left, value);
+        return node;
+      } else {
+        node.right = deleteNode(node.right, value);
+        return node;
+      }
+    };
+    this.root = deleteNode(this.root, value);
+  }
 }
+
+let tree = new BinarySearchTree();
+tree.insert(4);
+tree.insert(6);
+tree.insert(3);
+tree.insert(2);
+console.log(tree.root);
+console.log(tree);
+console.log(tree.find(6));
+tree.delete(6);
+console.log(tree);
+console.log(tree.find(2));
 
 // const manualTree = () => {
 //   let tree = new BinarySearchTree();
@@ -64,12 +103,3 @@ class BinarySearchTree {
 // };
 
 // console.log(JSON.stringify(manualTree()));
-
-let tree = new BinarySearchTree();
-tree.insert(4);
-tree.insert(6);
-tree.insert(3);
-tree.insert(2);
-console.log(tree.root);
-console.log(tree);
-console.log(tree.find(6));
