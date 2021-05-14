@@ -1,5 +1,3 @@
-const { WSAEHOSTDOWN } = require("constants");
-
 class Node {
   constructor(value) {
     this.value = value;
@@ -73,7 +71,7 @@ class BinarySearchTree {
         return node;
       }
     };
-    this.root = deleteNode(this.root, value);
+    deleteNode(this.root, value);
   }
 }
 
@@ -82,12 +80,12 @@ tree.insert(4);
 tree.insert(6);
 tree.insert(3);
 tree.insert(2);
-console.log(tree.root);
+// console.log(tree.root);
 console.log(tree);
-console.log(tree.find(6));
-tree.delete(6);
-console.log(tree);
-console.log(tree.find(2));
+// console.log(tree.find(6));
+// tree.delete(3);
+// console.log(tree);
+// console.log(tree.find(2));
 
 // const manualTree = () => {
 //   let tree = new BinarySearchTree();
