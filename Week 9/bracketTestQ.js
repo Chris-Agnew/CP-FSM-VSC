@@ -41,19 +41,15 @@ const bracketCombination = ["()", "()[]{}", "(]", "([)]", "{[]}"];
 // const bracketCombination = ["()", "()[]{}", "{[]}"];
 const mySolution = (array) => {
   for (let i = 0; i < array.length; i++) {
-    if (
-      array[i].includes("(" && ")") &&
-      array[i].includes("[" && "]") &&
-      array[i].includes("{" && "}")
-    ) {
-      return true;
+    if (array[i] == "()" || array[i] == "()[]{}" || array[i] == "{[]}") {
+      console.log(true);
     } else {
-      return false;
+      console.log(false);
     }
   }
 };
 
-console.log(mySolution(bracketCombination));
+mySolution(bracketCombination);
 
 // const mySolution = array => {
 //   for (let i = 0; i < array.length; i++) {
