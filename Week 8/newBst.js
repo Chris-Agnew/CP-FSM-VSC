@@ -36,6 +36,19 @@ class BST {
       }
     }
   }
+  delete(value) {
+    if (!this.root){
+      return `There is no ${value} to delete!`
+    }
+    let current = this.root
+    while (current) {
+      if (current == value) {
+        current.value = null
+      }else if (value < current.value) {
+      
+      }
+    }
+  }
 }
 
 let bst = new BST();

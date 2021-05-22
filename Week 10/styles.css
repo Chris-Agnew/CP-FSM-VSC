@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+}
+
+img {
+  border-radius: 50%;
+}
+.container {
+  border: 5px solid #333;
+}
+
+.stripe1 {
+  background-color: #083d77;
+}
+.stripe2 {
+  background-color: #ebebd3;
+}
+.stripe3 {
+  background-color: #da4167;
+}
+.stripe4 {
+  background-color: #f4d35e;
+  color: #39ff14;
+}
+.stripe5 {
+  background-color: #f78764;
+  color: #39ff14;
+}
