@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  background-image: linear-gradient(
+    280deg,
+    #ffffff 0%,
+    #6284ff 50%,
+    #ff0000 100%
+  );
+}
+
+.title {
+  text-align: center;
+  padding-top: 10%;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.container > img {
+  position: absolute;
+  left: 35%;
+  top: 20%;
+}
+
+.sushi-facts {
+  position: absolute;
+  left: 44%;
+  bottom: 30%;
+  padding-top: 2rem;
+}
+
+.bullets {
+}
